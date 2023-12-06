@@ -1,0 +1,56 @@
+body {
+    background-color: white;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    /* Asegura que el contenedor .login ocupe toda la altura de la ventana */
+}
+
+.title {
+    margin-top: 20px;
+    /* Ajusta según sea necesario */
+    text-align: center;
+}
+
+.iconoRed {
+    max-width: 200px;
+    /* Ajusta según el tamaño que desees para el logo */
+    height: auto;
+}
+
+.loginArea {
+    border-radius: 10px;
+    border: 1px solid lightgray;
+    width: fit-content;
+    height: fit-content;
+    margin-top: 20px;
+    /* Espacio entre el título y el formulario */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    /* Agrega un poco de espacio alrededor del formulario */
+}
+
+.loginArea input {
+    margin-top: 10px;
+    background-color: gainsboro;
+    padding: 2vh;
+    width: 400px;
+    border-radius: 10px;
+    border: none;
+    display: block;
+}
+
+.loginArea button {
+    background-color: rgb(35, 248, 141);
+    padding: 10px;
+    margin-top: 20px;
+    /* Espacio entre el último input y el botón */
+    border-radius: 10px;
+    width: 100%;
+    /* Hace que el botón se expanda al ancho del contenedor */
+}
