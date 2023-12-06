@@ -46,11 +46,46 @@ body {
 }
 
 .loginArea button {
-    background-color: rgb(35, 248, 141);
+    background: linear-gradient(to right, rgba(0, 255, 0, 0.6), rgba(0, 255, 0, 0.8));
     padding: 10px;
     margin-top: 20px;
-    /* Espacio entre el último input y el botón */
     border-radius: 10px;
     width: 100%;
-    /* Hace que el botón se expanda al ancho del contenedor */
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    background-size: 200% 100%;
+    /* Ajustar el tamaño del gradiente horizontalmente */
+    background-position: -100% 0;
+    /* Iniciar posición del gradiente hacia la izquierda */
+}
+
+.loginArea button:hover {
+    box-shadow: 0 0 20px rgba(35, 248, 141, 0.9);
+    /* Brillo más intenso en hover */
+    transform: scale(1.05);
+    /* Escalar el botón ligeramente hacia afuera */
+    animation: gradientMovement 2s linear infinite;
+    /* Animación de movimiento suave */
+}
+
+@keyframes gradientMovement {
+    0% {
+        background-position: -100% 0;
+        /* Iniciar posición del gradiente hacia la izquierda */
+    }
+
+    100% {
+        background-position: 200% 0;
+        /* Mover el gradiente hacia la derecha */
+    }
+}
+
+/* Resto del código para el brillo */
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 10px rgba(35, 248, 141, 0.7);
+    }
+
+    100% {
+        box-shadow: 0 0 20px rgba(35, 248, 141, 0.9);
+    }
 }
